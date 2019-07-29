@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -94,7 +95,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -323,21 +324,21 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">head</span>(<span class="kw">gi_available_templates</span>(), <span class="dv">50</span>)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt;  [1] &quot;1c&quot;                   &quot;1c-bitrix&quot;            &quot;a-frame&quot;             </span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;  [4] &quot;al&quot;                   &quot;aspnetcore&quot;           &quot;ate&quot;                 </span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;  [7] &quot;ats&quot;                  &quot;actionscript&quot;         &quot;ada&quot;                 </span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; [10] &quot;adobe&quot;                &quot;advancedinstaller&quot;    &quot;agda&quot;                </span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; [13] &quot;alteraquartusii&quot;      &quot;altium&quot;               &quot;android&quot;             </span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; [16] &quot;androidstudio&quot;        &quot;angular&quot;              &quot;anjuta&quot;              </span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; [19] &quot;ansible&quot;              &quot;apachecordova&quot;        &quot;apachehadoop&quot;        </span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; [22] &quot;appbuilder&quot;           &quot;appcode&quot;              &quot;appcode+all&quot;         </span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; [25] &quot;appcode+iml&quot;          &quot;appengine&quot;            &quot;appceleratortitanium&quot;</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; [28] &quot;aptanastudio&quot;         &quot;arcanist&quot;             &quot;archlinuxpackages&quot;   </span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; [31] &quot;archive&quot;              &quot;archives&quot;             &quot;assembler&quot;           </span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; [34] &quot;atmelstudio&quot;          &quot;audio&quot;                &quot;automationstudio&quot;    </span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; [37] &quot;autotools&quot;            &quot;autotools+strict&quot;     &quot;backup&quot;              </span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; [40] &quot;ballerina&quot;            &quot;basic&quot;                &quot;batch&quot;               </span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; [43] &quot;bazaar&quot;               &quot;bazel&quot;                &quot;bittorrent&quot;          </span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; [46] &quot;bitrise&quot;              &quot;bitrix&quot;               &quot;blackbox&quot;            </span></a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; [49] &quot;bloop&quot;                &quot;bookdown&quot;</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;  [7] &quot;ats&quot;                  &quot;awr&quot;                  &quot;actionscript&quot;        </span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; [10] &quot;ada&quot;                  &quot;adobe&quot;                &quot;advancedinstaller&quot;   </span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; [13] &quot;adventuregamestudio&quot;  &quot;agda&quot;                 &quot;alteraquartusii&quot;     </span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; [16] &quot;altium&quot;               &quot;android&quot;              &quot;androidstudio&quot;       </span></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; [19] &quot;angular&quot;              &quot;anjuta&quot;               &quot;ansible&quot;             </span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; [22] &quot;apachecordova&quot;        &quot;apachehadoop&quot;         &quot;appbuilder&quot;          </span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; [25] &quot;appcode&quot;              &quot;appcode+all&quot;          &quot;appcode+iml&quot;         </span></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt; [28] &quot;appengine&quot;            &quot;appceleratortitanium&quot; &quot;aptanastudio&quot;        </span></a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; [31] &quot;arcanist&quot;             &quot;archlinuxpackages&quot;    &quot;archive&quot;             </span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; [34] &quot;archives&quot;             &quot;assembler&quot;            &quot;atmelstudio&quot;         </span></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; [37] &quot;audio&quot;                &quot;automationstudio&quot;     &quot;autotools&quot;           </span></a>
+<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; [40] &quot;autotools+strict&quot;     &quot;backup&quot;               &quot;ballerina&quot;           </span></a>
+<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt; [43] &quot;basic&quot;                &quot;batch&quot;                &quot;bazaar&quot;              </span></a>
+<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt; [46] &quot;bazel&quot;                &quot;bittorrent&quot;           &quot;bitrise&quot;             </span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; [49] &quot;bitrix&quot;               &quot;blackbox&quot;</span></a></code></pre></div>
 <p>The function <code>gi_fetch_templates()</code> can be used to fetch particular template(s). For example, one could want to get the <code>java</code> and <code>c++</code> templates as follow:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">gi_fetch_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>))</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt; </span></a>
@@ -405,8 +406,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <a class="sourceLine" id="cb3-64" data-line-number="64"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb3-65" data-line-number="65"><span class="co">#&gt; # End of https://www.gitignore.io/api/java,c++</span></a></code></pre></div>
 <p>By default, the template(s) are not copied into the clipboard, this can be changed by setting <code>copy_to_clipboard = TRUE</code>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">gi_fetch_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>), <span class="dt">copy_to_clipboard =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; ● Copied to the clipboard. You can now paste it in your .gitignore file.</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">gi_fetch_templates</span>(<span class="kw">c</span>(<span class="st">&quot;java&quot;</span>, <span class="st">&quot;c++&quot;</span>), <span class="dt">copy_to_clipboard =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p>Additionally, you can tell <code>gi_fetch_templates()</code> to append automatically the <code>.gitignore</code> file in your project by setting <code>append_gitignore = TRUE</code>:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">gi_fetch_templates</span>(<span class="kw">c</span>(<span class="st">&quot;R&quot;</span>), <span class="dt">append_gitignore =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p>It is also possible to specify the <code>.gitignore</code> file to be modified by specifying the <code>gitignore_file</code> argument.</p>
@@ -451,7 +451,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <a class="sourceLine" id="cb6-39" data-line-number="39"><span class="co">#&gt; .httr-oauth</span></a>
 <a class="sourceLine" id="cb6-40" data-line-number="40"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb6-41" data-line-number="41"><span class="co">#&gt; # knitr and R markdown default cache directories</span></a>
-<a class="sourceLine" id="cb6-42" data-line-number="42"><span class="co">#&gt; /*_cache/</span></a>
+<a class="sourceLine" id="cb6-42" data-line-number="42"><span class="co">#&gt; *_cache/</span></a>
 <a class="sourceLine" id="cb6-43" data-line-number="43"><span class="co">#&gt; /cache/</span></a>
 <a class="sourceLine" id="cb6-44" data-line-number="44"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb6-45" data-line-number="45"><span class="co">#&gt; # Temporary files created by R markdown</span></a>
@@ -491,7 +491,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <a class="sourceLine" id="cb6-79" data-line-number="79"><span class="co">#&gt; [23] &quot;# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3&quot;</span></a>
 <a class="sourceLine" id="cb6-80" data-line-number="80"><span class="co">#&gt; [24] &quot;.httr-oauth&quot;                                                         </span></a>
 <a class="sourceLine" id="cb6-81" data-line-number="81"><span class="co">#&gt; [25] &quot;# knitr and R markdown default cache directories&quot;                    </span></a>
-<a class="sourceLine" id="cb6-82" data-line-number="82"><span class="co">#&gt; [26] &quot;/*_cache/&quot;                                                           </span></a>
+<a class="sourceLine" id="cb6-82" data-line-number="82"><span class="co">#&gt; [26] &quot;*_cache/&quot;                                                            </span></a>
 <a class="sourceLine" id="cb6-83" data-line-number="83"><span class="co">#&gt; [27] &quot;/cache/&quot;                                                             </span></a>
 <a class="sourceLine" id="cb6-84" data-line-number="84"><span class="co">#&gt; [28] &quot;# Temporary files created by R markdown&quot;                             </span></a>
 <a class="sourceLine" id="cb6-85" data-line-number="85"><span class="co">#&gt; [29] &quot;*.utf8.md&quot;                                                           </span></a>
@@ -502,6 +502,9 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <a class="sourceLine" id="cb6-90" data-line-number="90"><span class="co">#&gt; [34] &quot;# End of https://www.gitignore.io/api/r&quot;</span></a></code></pre></div>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

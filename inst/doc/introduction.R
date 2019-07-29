@@ -13,8 +13,8 @@ head(gi_available_templates(), 50)
 ## ------------------------------------------------------------------------
 gi_fetch_templates(c("java", "c++"))
 
-## ---- eval=TRUE----------------------------------------------------------
-gi_fetch_templates(c("java", "c++"), copy_to_clipboard = TRUE)
+## ---- eval=FALSE---------------------------------------------------------
+#  gi_fetch_templates(c("java", "c++"), copy_to_clipboard = TRUE)
 
 ## ---- eval=FALSE---------------------------------------------------------
 #  gi_fetch_templates(c("R"), append_gitignore = TRUE)

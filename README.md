@@ -14,7 +14,7 @@ Status](https://ci.appveyor.com/api/projects/status/github/ropensci/gitignore?br
 [![Build
 Status](https://travis-ci.org/ropensci/gitignore.svg?branch=master)](https://travis-ci.org/ropensci/gitignore)
 [![Codecov test
-coverage](https://codecov.io/gh/PMassicotte/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/PMassicotte/gitignore?branch=master)
+coverage](https://codecov.io/gh/ropensci/gitignore/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/gitignore?branch=master)
 
 [![DOI](https://zenodo.org/badge/184759416.svg)](https://zenodo.org/badge/latestdoi/184759416)
 
@@ -44,7 +44,13 @@ package shines as it can be used to programmatically modify the
 
 ## Installation
 
-`gitignore` can be installed from GitHub:
+The CRAN version of `gitignore` can be installed using:
+
+``` r
+install.packages("gitignore")
+```
+
+The dev version of `gitignore` can be installed from GitHub:
 
 ``` r
 install.packages("devtools")
@@ -67,27 +73,136 @@ library(gitignore)
 head(gi_available_templates(), 25)
 #>  [1] "1c"                   "1c-bitrix"            "actionscript"        
 #>  [4] "ada"                  "adobe"                "advancedinstaller"   
-#>  [7] "a-frame"              "agda"                 "al"                  
-#> [10] "alteraquartusii"      "altium"               "android"             
-#> [13] "androidstudio"        "angular"              "anjuta"              
-#> [16] "ansible"              "apachecordova"        "apachehadoop"        
-#> [19] "appbuilder"           "appceleratortitanium" "appcode"             
-#> [22] "appcode+all"          "appcode+iml"          "appengine"           
-#> [25] "aptanastudio"
+#>  [7] "adventuregamestudio"  "a-frame"              "agda"                
+#> [10] "al"                   "alteraquartusii"      "altium"              
+#> [13] "android"              "androidstudio"        "angular"             
+#> [16] "anjuta"               "ansible"              "apachecordova"       
+#> [19] "apachehadoop"         "appbuilder"           "appceleratortitanium"
+#> [22] "appcode"              "appcode+all"          "appcode+iml"         
+#> [25] "appengine"
 ```
 
 Templates can be fetched using the `gi_fetch_templates()` function.
 
 ``` r
 gi_fetch_templates("R")
-● Copied to the clipboard. You can now paste it in your .gitignore file.
+
+# Created by https://www.gitignore.io/api/r
+# Edit at https://www.gitignore.io/?templates=r
+
+### R ###
+# History files
+.Rhistory
+.Rapp.history
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user/
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+### R.Bookdown Stack ###
+# R package: bookdown caching files
+/*_files/
+
+# End of https://www.gitignore.io/api/r
 ```
 
 Multiple templates can be fetched by specifying multiple values:
 
 ``` r
 gi_fetch_templates(c("java", "c++"))
-● Copied to the clipboard. You can now paste it in your .gitignore file.
+
+# Created by https://www.gitignore.io/api/java,c++
+# Edit at https://www.gitignore.io/?templates=java,c++
+
+### C++ ###
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# End of https://www.gitignore.io/api/java,c++
 ```
 
 By default, templates are copied into the clipboard. It is also possible
