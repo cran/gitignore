@@ -1,7 +1,7 @@
 Type: Package
 Package: gitignore
 Title: Create Useful .gitignore Files for your Project
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: 
     c(person(given = "Philippe",
              family = "Massicotte",
@@ -30,14 +30,13 @@ Suggests: covr, knitr, rmarkdown, spelling, testthat (>= 2.1.0)
 VignetteBuilder: knitr
 Encoding: UTF-8
 Language: en-US
-LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 NeedsCompilation: no
-Packaged: 2020-11-04 19:34:36 UTC; filoche
+Packaged: 2021-10-31 16:35:22 UTC; filoche
 Author: Philippe Massicotte [aut, cre]
     (<https://orcid.org/0000-0002-5919-4116>),
   Amanda Dobbyn [rev],
   Mauro Lepore [rev] (<https://orcid.org/0000-0002-1986-7988>)
 Maintainer: Philippe Massicotte <pmassicotte@hotmail.com>
 Repository: CRAN
-Date/Publication: 2020-11-04 19:50:03 UTC
+Date/Publication: 2021-10-31 16:50:02 UTC
