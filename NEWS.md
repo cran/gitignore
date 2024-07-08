@@ -1,3 +1,11 @@
+# gitignore 0.1.7
+
+- gitignore now provides clickable links as it uses cli instead of crayon (@olivroy).
+
+- Upgrading to use Bootstrap 5.
+
+- Add light and dark themes to the vignette.
+
 # gitignore 0.1.6
 
 - Skip or do not execute code chunks in vignettes if the internet or the gitignore API is not available, to fix CRAN problems.
@@ -5,13 +13,13 @@
 
 # gitignore 0.1.5
 
-- Using Github Actions for continuous integration.
+- Using GitHub Actions for continuous integration.
 
 - Fixing CRAN check results where tests failed when internet connection was not available (#18).
 
 # gitignore 0.1.4
 
-- Change backend from https://www.gitignore.io/ to https://www.toptal.com/developers/gitignore as the former now redirects to the later (#13 @pat-s).
+- Change backend from https://www.gitignore.io/ to https://www.toptal.com/developers/gitignore as the former now redirects to the latter (#13 @pat-s).
 
 - Use `file.path()` instead of `paste0()` to build path. @dpprdan
 
