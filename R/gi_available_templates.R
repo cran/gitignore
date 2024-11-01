@@ -7,21 +7,23 @@
 #' @return A character with all templates supported by gitignore.io.
 #' @export
 #'
-#' @examples
+#' @examplesIf curl::has_internet()
 #' gi_available_templates()
 gi_available_templates <-
   function() {
     url <- glue::glue("{backend_url()}/api/list?format=json")
     res <- curl::curl_fetch_memory(url)
 
-    if (res$status_code != 200) {
+    if (res[["status_code"]] != 200L) {
       cli::cli_abort("http request failed with status code: {res$status_code}")
     }
 
-    json_text <- rawToChar(res$content)
+    json_text <- rawToChar(res[["content"]])
 
     if (!jsonlite::validate(json_text)) {
-      cli::cli_abort("Invalid json file returned in gi_available_templates() function.")
+      cli::cli_abort(
+        "Invalid json file returned in gi_available_templates() function."
+      )
     }
 
     r <- jsonlite::fromJSON(json_text)
